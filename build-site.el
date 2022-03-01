@@ -34,7 +34,13 @@
   ;:straight (:host github :repo "tali713/esxml")
   :ensure t)
 
+(use-package emacsql-sqlite3
+  :straight (:host github :repo "cireu/emacsql-sqlite3"))
+
 (use-package org-roam
+  :after emacsql-sqlite3
+  :init 
+  (setq org-roam-database-connector 'sqlite3) 
   :custom 
   (org-roam-directory (file-truename "./org/"))
   (org-roam-db-location "./.org-roam.db")
