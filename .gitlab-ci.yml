@@ -38,6 +38,7 @@ publish-assets:
 pages:
     stage: deploy
     needs: [publish-org, publish-assets]
+    image: iquiw/alpine-emacs
     script:
         - emacs -Q --batch -l build-site.el --funcall org-publish-all
     artifacts:
