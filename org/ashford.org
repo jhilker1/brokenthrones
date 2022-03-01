@@ -1,0 +1,13 @@
+# Created 2022-02-21 Mon 16:15
+:PROPERTIES:
+:ID:       0851f31f-3b24-4ead-9bee-152c670fe1af
+:NAMESPACE: Conworlds
+:CATEGORY: Broken Thrones
+:END:
+#+title: Ashford
+#+author: Jacob Hilker
+#+filetags: :BrokenThrones:The__Ashes__Chronicles:place
+
+Ashford is a city in [[id:85db3992-94d5-47ce-827d-f43985ec27c1][Kilshire]].  It is currently ruled by [[file:henry-the-just.org][Henry "the Just"]].
+
+

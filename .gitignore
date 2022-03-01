@@ -1,0 +1,9 @@
+node_modules/
+/.emacs.d/
+*~
+/org/.org-roam.db
+/public/
+/static/css/style.css
+/.org-cache/
+*.org#
+/biblio

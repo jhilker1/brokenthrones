@@ -1,0 +1,7 @@
+#+title: Bibliography
+#+BIBLIOGRAPHY: ./biblio/references.bib
+
+
+Here is the bibliography for the project - [cite:@BrayFriend2003] is a good book.
+
+#+print_bibliography:

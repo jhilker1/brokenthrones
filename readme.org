@@ -1,0 +1,3 @@
+#+title: Broken Thrones Wiki
+
+A wiki for my alt-history setting broken thrones, built with emacs and tailwind.

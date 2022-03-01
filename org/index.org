@@ -1,0 +1,8 @@
+# -*- bibtex-completion-bibliography: "../biblio/references.bib"; -*-
+#+title: Home
+#+options: title:nil
+#+pagetype: index
+
+
+Hello there, and welcome to the wiki for Broken Thrones, a historical fantasy universe created by [[https://jhilker.com][Jacob Hilker]].
+

@@ -1,0 +1,7 @@
+#+title: FAQ
+#+date: <2022-02-28 Mon>
+#+cite_export: csl chicago-note.csl
+
+
+Here are some frequently asked questions about the setting. I will keep this updated as best I can. 
+

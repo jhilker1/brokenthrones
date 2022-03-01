@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'King Harold';
+  src: url('KingHarold-Regular.ttf') format('truetype'),
+       url('KingHarold-Regular.woff') format('woff'),
+       url('KingHarold-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

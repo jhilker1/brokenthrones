@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+@import url("https://fontlibrary.org//face/eadui");
+@import url("/fonts/KingHarold/KingHarold.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+   
+    html {
+        @apply scroll-smooth motion-reduce:scroll-auto;
+    }
+
+    body {
+        @apply min-h-screen antialiased bg-slate-100;
+    }
+    code,pre {
+        @apply !text-[12px];
+    }
+
+
+     li[role="doc-endnote"] > p {
+        @apply !text-[12px];
+    }
+
+    li[role="doc-endnote"]::marker {
+        @apply !text-[12px];
+    }
+}
+
+@layer components {
+    .site-header {
+        @apply z-10 items-center grid-in-header;
+    }
+    
+     .infobox {
+       @apply md:float-right w-[30%] lg:w-1/4 mx-auto border border-gray-400 dark:border-gray-700 md:ml-7 bg-gray-200 dark:bg-gray-800;
+    }
+
+  .infobox td {
+    @apply !p-1;
+  }
+}

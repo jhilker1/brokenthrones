@@ -1,0 +1,14 @@
+# Created 2022-02-21 Mon 16:15
+:PROPERTIES:
+:ID:       e9967d3e-5838-4302-acd0-ff5be3d16183
+:CATEGORY: Broken Thrones
+:NAMESPACE: Conworlds
+:END:
+#+title: Henry "the Just"
+#+author: Jacob Hilker
+
+
+
+Henry "the Just" is a landed knight and the lord of [[id:0851f31f-3b24-4ead-9bee-152c670fe1af][Ashford]]. 
+
+

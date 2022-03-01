@@ -1,0 +1,11 @@
+# Created 2022-02-21 Mon 16:15
+:PROPERTIES:
+:ID: 85db3992-94d5-47ce-827d-f43985ec27c1
+:NAMESPACE: Conworlds
+:CATEGORY: Broken Thrones
+:END:
+#+title: Kilshire
+#+author: Jacob Hilker
+#+filetags: :The__Ashes__Chronicles:BrokenThrones:place:
+
+Kilshire is a barony in central England.
