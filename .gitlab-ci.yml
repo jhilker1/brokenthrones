@@ -13,6 +13,7 @@ publish-org:
         paths:
         #- public
         - org
+        - .emacs.d
 
 generate-css:
     stage: build
@@ -33,3 +34,12 @@ publish-assets:
     artifacts:
         paths:
         - static
+
+pages:
+    stage: deploy
+    needs: [publish-org, publish-assets]
+    script:
+        - emacs -Q --batch -l build-site.el --funcall org-publish-all
+    artifacts:
+        paths:
+            - public
