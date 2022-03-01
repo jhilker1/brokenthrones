@@ -6,7 +6,7 @@ publish-org:
     stage: build
     image: iquiw/alpine-emacs
     before_script:
-        - apk add --no-cache --update sqlite
+        - apk add --no-cache --update sqlite git
     script:
         - emacs -Q --batch -l build-site.el --funcall 'jh/publish-org'
     artifacts:
