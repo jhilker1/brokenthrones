@@ -10,7 +10,7 @@ publish-org:
     script:
         - emacs -Q --batch -l build-site.el --funcall jh/publish-org
     cache:
-        key: .emacs.d-cache-$CI_COMMIT_REF_SLUG
+        key: site-cache-$CI_COMMIT_REF_SLUG
         paths:
         - public
         - org
@@ -25,9 +25,9 @@ generate-css:
         - npm ci
         - npm run build-css:production
     cache:
-        key: $CI_COMMIT_REF_SLUG
+        key: site-cache-$CI_COMMIT_REF_SLUG
         paths:
-        - .npm/
+            - .npm/
 
 
 
@@ -39,7 +39,8 @@ publish-assets:
         - apk add --no-cache --update sqlite git
     script:
         - emacs -Q --batch -l build-site.el --funcall jh/publish-assets
-    artifacts:
+    cache:
+        key: site-cache-$CI_COMMIT_REF_SLUG
         paths:
         - static
 
