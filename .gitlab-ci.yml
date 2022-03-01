@@ -11,9 +11,10 @@ publish-org:
         - emacs -Q --batch -l build-site.el --funcall jh/publish-org
     artifacts:
         paths:
-        #- public
+        - public
         - org
-        - .emacs.d
+        #- .emacs.d/straight/build-cache.el
+        - .emacs.d/straight/versions/default.el
 
 generate-css:
     stage: build
