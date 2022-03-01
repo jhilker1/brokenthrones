@@ -11,7 +11,7 @@ publish-org:
         - emacs -Q --batch -l build-site.el --funcall jh/publish-org
     artifacts:
         paths:
-        - public
+        #- public
         - org
 
 generate-css:
@@ -25,21 +25,11 @@ generate-css:
 publish-assets:    
     stage: build
     image: iquiw/alpine-emacs
+    needs: [publish-org, generate-css]
     before_script:
         - apk add --no-cache --update sqlite git
     script:
         - emacs -Q --batch -l build-site.el --funcall jh/publish-assets
     artifacts:
         paths:
-        - public
-
-pages:
-    stage: deploy
-    image: iquiw/alpine-emacs
-    before_script:
-        - apk add --no-cache --update sqlite git
-    script:
-        - emacs -Q --batch -l build-site.el --funcall org-publish-all
-    artifacts:
-        paths:
-            - public
+        - static
