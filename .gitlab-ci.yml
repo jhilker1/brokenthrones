@@ -8,10 +8,11 @@ publish-org:
     before_script:
         - apk add --no-cache --update sqlite git
     script:
-        - emacs -Q --batch -l build-site.el --funcall 'jh/publish-org'
+        - emacs -Q --batch -l build-site.el --funcall jh/publish-org
     artifacts:
         paths:
         - public
+        - org
 
 generate-css:
     stage: build
