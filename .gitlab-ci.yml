@@ -23,7 +23,9 @@ generate-css:
     script:
         - npm ci
         - npm run build-css:production
-
+    artifacts:
+        paths:
+        - static
 publish-assets:    
     stage: build
     image: iquiw/alpine-emacs
