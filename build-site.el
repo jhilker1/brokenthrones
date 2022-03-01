@@ -129,7 +129,7 @@
   "File types that are published as static files.")
 
 (setq jh/site-title "Broken Thrones"
-      jh/site-url "https://brokenthrones.jhilker.com/"
+      jh/site-url "https://jhilker.gitlab.io/brokenthrones/"
       jh/site-tagline "A world of historical fantasy awaits."
       jh/site-banner "img/brokenthronesbanner.png")
 

@@ -201,7 +201,7 @@ First, I need to define attachments to be published as-is, instead of exporting 
 Second, I'd like to define some basic site-export variables - such as the URL, title, tagline, etc. I also set the banner image here, as well as my social media links.
 #+begin_src elisp
 (setq jh/site-title "Broken Thrones"
-      jh/site-url "https://brokenthrones.jhilker.com/"
+      jh/site-url "https://jhilker.gitlab.io/brokenthrones/"
       jh/site-tagline "A world of historical fantasy awaits."
       jh/site-banner "img/brokenthronesbanner.png")
 

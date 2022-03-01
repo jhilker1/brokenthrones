@@ -27,6 +27,7 @@ module.exports = {
        },
         fontFamily: {
             alegreya: ["Alegreya", defaultTheme.fontFamily.serif],
+            kingHarold: ["'King Harold'", defaultTheme.fontFamily.serif],
         },
         colors: {
             heraldic: {
@@ -37,10 +38,10 @@ module.exports = {
         typography: (theme) => ({
             DEFAULT: {
               css: {
-                  fontFamily: defaultTheme.fontFamily.serif,
+                  fontFamily: [theme("fontFamily.alegreya")],
                   
                   "h1,h2,h3,h4,h5,h6": {
-                      fontFamily: [theme("fontFamily.alegreya")],
+                      fontFamily: [theme("fontFamily.kingHarold")],
                   },
               },
             },
