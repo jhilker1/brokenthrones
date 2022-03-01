@@ -84,7 +84,7 @@
                         ("-$" . "")))                   ;; remove ending underscore
                (slug (-reduce-from #'cl-replace (strip-nonspacing-marks title) pairs)))
           (downcase slug))))))
-(org-roam-db-sync)
+;(org-roam-db-sync)
 
 (use-package org-special-block-extras
   :ensure t
@@ -120,7 +120,7 @@
 
 (setq org-id-link-to-org-use-id t)
 ;; (org-roam-db-autosync-mode)
-(straight-freeze-versions)
+;(straight-freeze-versions)
 (setq org-id-extra-files (org-roam-list-files))
 
 (defvar site-attachments
