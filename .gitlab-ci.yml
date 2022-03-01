@@ -23,7 +23,7 @@ generate-css:
         - npm run build-css:production
 
 publish-assets:    
-stage: build
+    stage: build
     image: iquiw/alpine-emacs
     before_script:
         - apk add --no-cache --update sqlite git
@@ -34,12 +34,8 @@ stage: build
         - public
 
 pages:
-  <<: *build
+  <<: build
   rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
-
-test:
-  <<: *build
-  rules:
-    - if: $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
+    
 
