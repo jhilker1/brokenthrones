@@ -1,0 +1,21 @@
+stages:
+    - build
+    - deploy
+
+publish-org:
+    stage: build
+    script:
+        - emacs -Q --batch -l build-site.el --funcall 'jh/publish-org'
+    artifacts:
+        paths:
+        - public
+
+generate-css:
+    stage: build
+    needs: [publish-org]
+    image: node:latest
+    script:
+        - npm ci
+        - npm run build-css:production
+
+    
