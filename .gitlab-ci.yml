@@ -34,8 +34,8 @@ publish-assets:
         - public
 
 pages:
-  <<: build
-  rules:
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
-    
-
+    stage: deploy
+    <<: build
+    artifacts:
+        paths:
+        - public
