@@ -9,12 +9,13 @@ publish-org:
         - apk add --no-cache --update sqlite git
     script:
         - emacs -Q --batch -l build-site.el --funcall jh/publish-org
-    artifacts:
+    cache:
+        key: .emacs.d-cache-$CI_COMMIT_REF_SLUG
         paths:
         - public
         - org
-        #- .emacs.d/straight/build-cache.el
-        - .emacs.d/straight/versions/default.el
+        - .emacs.d/
+        
 
 generate-css:
     stage: build
@@ -23,9 +24,13 @@ generate-css:
     script:
         - npm ci
         - npm run build-css:production
-    artifacts:
+    cache:
+        key: $CI_COMMIT_REF_SLUG
         paths:
-        - static
+        - .npm/
+
+
+
 publish-assets:    
     stage: build
     image: iquiw/alpine-emacs
