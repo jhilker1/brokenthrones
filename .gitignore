@@ -7,3 +7,4 @@ node_modules/
 /.org-cache/
 *.org#
 /biblio
+.org-roam.db

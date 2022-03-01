@@ -39,8 +39,8 @@
 
 (use-package org-roam
   :after emacsql-sqlite3
-  :init 
-  (setq org-roam-database-connector 'sqlite3) 
+  :init
+  (setq org-roam-database-connector 'sqlite3)
   :custom 
   (org-roam-directory (file-truename "./org/"))
   (org-roam-db-location "./.org-roam.db")
@@ -84,6 +84,7 @@
                         ("-$" . "")))                   ;; remove ending underscore
                (slug (-reduce-from #'cl-replace (strip-nonspacing-marks title) pairs)))
           (downcase slug))))))
+(org-roam-db-sync)
 
 (use-package org-special-block-extras
   :ensure t
@@ -119,7 +120,7 @@
 
 (setq org-id-link-to-org-use-id t)
 ;; (org-roam-db-autosync-mode)
-
+(straight-freeze-versions)
 (setq org-id-extra-files (org-roam-list-files))
 
 (defvar site-attachments
@@ -252,8 +253,8 @@
   "Removes file extension and changes the path into lowercase file:// links."
   (when (string= 'id (org-element-property :type link))
     (let*((node-id (org-element-property :path link))
-          (source-node (org-roam-node-from-id node-id))
-          (source-file (org-roam-node-file source-node)))
+              (source-node (org-roam-node-from-id node-id))
+              (source-file (org-roam-node-file source-node)))
       (org-element-put-property link :path (concat jh/site-url (file-name-sans-extension source-file)))))
 
     (let ((exported-link (org-export-custom-protocol-maybe link contents 'html info)))
